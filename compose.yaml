@@ -34,3 +34,4 @@ volumes:
 networks:
   smartcity-network:
     driver: bridge
+
