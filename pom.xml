@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.fiap</groupId>
 	<artifactId>smartcity</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>smartcity</name>
 	<description>Implantação de banco de dados NoSql, projeto smartCity</description>
 	<url/>
