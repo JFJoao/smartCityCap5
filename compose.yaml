@@ -20,7 +20,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb://${{ secrets.MONGO_INITDB_ROOT_USERNAME }}:${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}@mongo:27017/smartcity?authSource=admin
+#     SPRING_DATA_MONGODB_URI: mongodb://${{ secrets.MONGO_INITDB_ROOT_USERNAME }}:${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}@mongo:27017/smartcity?authSource=admin
+      SPRING_DATA_MONGODB_URI: mongodb://${{ secrets.MONGO_INITDB_ROOT_USERNAME }}:${{ secrets.MONGO_INITDB_ROOT_PASSWORD }}@fiap-simple-api-smartcity-c4cmf8exgca0bag5.brazilsouth-01.azurewebsites.net:27017/smartcity?authSource=admin&retryWrites=true&w=majority
+
+
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
       - mongo

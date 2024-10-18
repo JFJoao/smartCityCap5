@@ -19,6 +19,7 @@ public class Paciente {
     private int idade;
     private String genero;
     private List<String> historicoDoencas;
+    private List<String> historicoMedico;
 
     // lombok nao carregou em service, criado manual
     public List<Exame> getExames() {
@@ -40,4 +41,12 @@ public class Paciente {
 
     private List<Exame> exames;
     private List<Tratamento> tratamentos;
+
+    public List<String> getHistoricoMedico() {
+        return historicoMedico;
+    }
+
+    public void setHistoricoMedico(List<String> historicoMedico) {
+        this.historicoMedico = historicoMedico;
+    }
 }
