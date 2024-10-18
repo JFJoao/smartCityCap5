@@ -16,6 +16,9 @@ public class PacienteService {
     @Autowired
     private PacienteRepository pacienteRepository;
 
+    public PacienteService(PacienteRepository pacienteRepository) {
+    }
+
     // Método para adicionar um novo paciente
     public Paciente adicionarPaciente(Paciente novoPaciente) {
         return pacienteRepository.save(novoPaciente);

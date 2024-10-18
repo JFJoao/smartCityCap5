@@ -13,6 +13,9 @@ public class ExameService {
     @Autowired
     private ExameRepository exameRepository;
 
+    public ExameService(ExameRepository exameRepository) {
+    }
+
     public List<Exame> listarTodosExames() {
         return exameRepository.findAll();
     }
@@ -34,5 +37,9 @@ public class ExameService {
     public void removerExame(String id) {
         Exame exame = buscarExamePorId(id);
         exameRepository.delete(exame);
+    }
+
+    public List<Exame> listarExames() {
+        return exameRepository.findAll();
     }
 }

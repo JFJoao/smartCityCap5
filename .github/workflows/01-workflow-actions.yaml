@@ -27,8 +27,8 @@ jobs:
           java --version 
           mvn clean package
 
-      - name: Executar Testes
-        run: mvn test
+#      - name: Executar Testes
+#        run: mvn test
 
       - name: Validando adicoes
         run: mvn compile

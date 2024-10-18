@@ -21,6 +21,9 @@ public class Paciente {
     private List<String> historicoDoencas;
     private List<String> historicoMedico;
 
+    public Paciente(String joão, String number) {
+    }
+
     // lombok nao carregou em service, criado manual
     public List<Exame> getExames() {
         return exames;

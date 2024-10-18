@@ -8,7 +8,5 @@ import java.util.List;
 
 @Repository
 public interface MedicoRepository extends MongoRepository<Medico, String> {
-
-    // encontrar médicos por especialidade, match com
     List<Medico> findByEspecialidade(String especialidade);
 }

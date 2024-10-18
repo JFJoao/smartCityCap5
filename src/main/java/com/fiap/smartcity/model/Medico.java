@@ -18,4 +18,7 @@ public class Medico {
     private String nome;
     private String especialidade;
     private List<String> doencasTratadas;
+
+    public Medico(String s, String crm123) {
+    }
 }
