@@ -40,14 +40,14 @@ jobs:
         - name: Log in to Azure
           uses: azure/login@v1
           with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
 
         -
-            name: Deploy to Azure Web App
-            id: deploy-to-webapp
-            uses: azure/webapps-deploy@v2
-            with:
-              app-name: 'fiap-simple-api-smartcity'
-              publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-              images: 'index.docker.io/${{ secrets.DOCKERHUB_USERNAME }}/fiap-simple-api-smartcity:${{ github.sha }}'
-              slot-name: 'production'
+          name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: 'fiap-simple-api-smartcity'
+            publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+            images: 'index.docker.io/${{ secrets.DOCKERHUB_USERNAME }}/fiap-simple-api-smartcity:${{ github.sha }}'
+            slot-name: 'production'
