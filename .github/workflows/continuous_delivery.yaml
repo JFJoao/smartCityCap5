@@ -49,5 +49,5 @@ jobs:
           with:
             app-name: 'fiap-simple-api-smartcity'
             publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-            images: 'index.docker.io/${{ secrets.DOCKERHUB_USERNAME }}/fiap-simple-api-smartcity:${{ github.sha }}'
+            images: 'index.docker.io/${{ secrets.DOCKERHUB_USERNAME }}/simple-api-java:${{ github.sha }}'
             slot-name: 'production'
