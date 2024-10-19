@@ -24,7 +24,7 @@ O **FIAP Simple API - Smart City** é uma API desenvolvida em Java utilizando Sp
 
 Antes de iniciar, você precisará ter instalado em sua máquina:
 
-- **Java 21** (JDK)
+- **Java 17** (JDK)
 - **Maven** (para gerenciamento de dependências)
 - **Docker** (para construir e executar a imagem da aplicação)
 - **MongoDB** (instância local ou em nuvem)
