@@ -83,3 +83,65 @@ Certifique-se de configurar as seguintes variáveis de ambiente para a aplicaç�
 - DOCKER_REGISTRY_SERVER_URL: URL do registro Docker (ex: https://index.docker.io)
 - DOCKER_REGISTRY_SERVER_USERNAME: Usuário do Docker Hub
 - DOCKER_REGISTRY_SERVER_PASSWORD: Senha ou token de acesso do Docker Hub
+
+# Executando Testes Automatizados e Relatórios
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de que você tenha os seguintes itens instalados no seu ambiente de desenvolvimento:
+
+- **Java 17** ou superior
+- **Maven** (para gerenciar as dependências e rodar os testes)
+- **Git** (para clonar o repositório)
+
+## Como Executar os Testes
+
+### 1. Clonar o Repositório
+
+Clone o repositório do projeto para o seu ambiente local utilizando o comando abaixo:
+
+```bash
+git clone https://github.com/JFJoao/smartCityCap5.git
+```
+
+Depois, navegue até o diretório clonado:
+
+```bash
+cd smartCityCap5
+```
+
+### 2. Executar Todos os Testes
+   Para executar todos os testes automatizados do projeto, incluindo os testes de API e os cenários de BDD, utilize o seguinte comando Maven:
+
+```bash
+mvn clean test
+```
+
+Esse comando fará o seguinte:
+
+- Limpará qualquer compilação anterior.
+- Compilará o projeto.
+- Executará todos os testes automatizados.
+- Ao final da execução, o resultado dos testes será exibido no terminal, informando quantos testes foram executados, quantos passaram e quantos falharam.
+
+### 3. Relatório de Testes
+   Após a execução dos testes, o Maven gera automaticamente relatórios detalhados sobre os testes. Esses relatórios são gerados na pasta target do projeto, com os seguintes arquivos e diretórios relevantes:
+
+- Relatório de Testes Unitários e de Integração:
+
+- Relatório geral: target/surefire-reports/index.html (testes unitários)
+- Relatório para testes de integração: target/failsafe-reports/index.html (se houver testes de integração)
+- Relatório de Testes BDD com Cucumber:
+
+Relatório Cucumber: target/cucumber-reports/ (contém detalhes dos cenários de teste escritos em Gherkin)
+### 4. Como Acessar o Relatório
+   Para acessar o relatório gerado após a execução dos testes:
+
+- Navegue até a pasta target/surefire-reports ou target/cucumber-reports (dependendo do tipo de teste que você executou).
+- Abra o arquivo index.html no seu navegador.
+- O relatório exibirá um resumo detalhado dos testes, mostrando quais passaram e falharam, com informações adicionais sobre as falhas.
+
+### Considerações Finais
+- Todos os testes e cenários de comportamento (BDD) são validados com base em interações do usuário com a aplicação.
+- Os relatórios de testes gerados em target/surefire-reports/ e target/cucumber-reports/ ajudam a identificar facilmente falhas e a verificar o comportamento esperado.
+Agora que você configurou o ambiente corretamente, basta executar os testes e verificar os relatórios gerados para garantir a qualidade da aplicação!
